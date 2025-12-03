@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/migration/changelog/001_create_user_table.yml
+  - include:
+      file: db/migration/changelog/002_create_card_table.yml
+
+
