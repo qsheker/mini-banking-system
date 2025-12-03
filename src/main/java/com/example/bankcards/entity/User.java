@@ -24,10 +24,11 @@ public class User extends BaseEntity{
     @Column(unique = true, nullable = false)
     private String email;
 
-    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
-    @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role")
-    private Set<Role> roles;
+    private Role role;
+
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    private Set<Card> cards;
 }
 
