@@ -1,10 +1,12 @@
 spring:
   application:
     name: card-rest-service
+
   datasource:
     url: ${URL_DB}
     password: ${PASSWORD_DB}
     username: ${USERNAME_DB}
+
   jpa:
     show-sql: true
     hibernate:
@@ -12,3 +14,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
