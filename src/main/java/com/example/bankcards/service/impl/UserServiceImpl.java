@@ -1,4 +1,6 @@
 package com.example.bankcards.service.impl;
 
-public class UserService {
+import com.example.bankcards.service.UserService;
+
+public class UserServiceImpl implements UserService {
 }
